@@ -24,7 +24,7 @@ export const business = {
   // Exact pin. Stand inside the parlour, open Google Maps on the phone, long-press
   // the blue dot, and copy the two numbers shown, e.g. { lat: 28.71773, lng: 77.05433 }.
   // While null, the map and directions use the address text above.
-  geo: null,
+  geo: { lat: 28.717986, lng: 77.0545468 },
 
   // Once the Google Business Profile is live, paste its "Share → Copy link" URL here
   // so "Get directions" opens the parlour's own listing (with its reviews).
