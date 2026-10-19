@@ -1,0 +1,203 @@
+.section {
+  padding-block: 56px;
+  background: linear-gradient(180deg, var(--blush-100), var(--blush-50));
+}
+
+.card {
+  max-width: 560px;
+  margin-inline: auto;
+  padding: 22px 18px;
+  background: var(--white);
+  border: 1px solid var(--gold-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+/* 16px font stops Android/iOS zooming into fields. */
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--blush-50);
+  border: 1.5px solid var(--blush-300);
+  border-radius: var(--radius-sm);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.field select {
+  padding-right: 36px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23A9566A' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgb(169 86 106 / 0.18);
+}
+
+.field [aria-invalid='true'] {
+  border-color: var(--error);
+}
+
+.error {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--error);
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+.submit {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 4px;
+  font-size: 1rem;
+}
+
+.small {
+  font-size: 0.8125rem;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+/* Review step */
+
+.review {
+  display: grid;
+  gap: 16px;
+}
+
+.reviewTitle {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--rose-700);
+  outline: none;
+}
+
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.steps li {
+  display: grid;
+  gap: 12px;
+}
+
+.waButton {
+  width: 100%;
+  min-height: 54px;
+  font-size: 1rem;
+}
+
+.hint {
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.emailStatus {
+  font-size: 0.875rem;
+}
+.ok {
+  color: var(--success);
+  font-weight: 600;
+}
+.fail {
+  color: var(--error);
+}
+.dev {
+  padding: 8px 12px;
+  border: 1px dashed var(--gold);
+  border-radius: var(--radius-sm);
+  color: var(--gold-dark);
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 14px;
+  margin: 0;
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  background: var(--blush-50);
+  border-radius: var(--radius-sm);
+}
+.summary dt {
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.summary dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.notice {
+  padding: 12px 14px;
+  font-size: 0.875rem;
+  background: #fdf5e6;
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+}
+
+.reviewActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 340px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

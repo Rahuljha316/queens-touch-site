@@ -1,0 +1,145 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 20%, rgb(232 207 156 / 0.35), transparent 45%),
+    radial-gradient(circle at 10% 90%, rgb(237 199 192 / 0.6), transparent 50%),
+    linear-gradient(180deg, var(--blush-100), var(--blush-200));
+}
+
+.inner {
+  display: grid;
+  gap: 8px;
+  padding-top: 28px;
+}
+
+.copy {
+  text-align: center;
+}
+
+.welcome {
+  font-family: var(--font-script);
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--gold-dark);
+}
+
+/* Rose gradient lettering, like the board wordmark. */
+.wordmark {
+  margin-top: 4px;
+  font-size: clamp(2.3rem, 11.5vw, 4.6rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  background: linear-gradient(180deg, #b45c74 0%, var(--rose-800) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gold ribbon behind the tagline. */
+.ribbon {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 28px;
+  font-weight: 700;
+  font-size: clamp(0.8rem, 3.6vw, 1.15rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: linear-gradient(90deg, transparent, var(--gold-light) 18%, var(--gold-light) 82%, transparent);
+}
+
+.hindi {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: var(--rose-700);
+}
+
+.lead {
+  max-width: 30rem;
+  margin: 16px auto 0;
+  color: var(--ink-soft);
+}
+
+.ctas {
+  display: grid;
+  gap: 10px;
+  max-width: 400px;
+  margin: 22px auto 0;
+}
+
+.mainCta {
+  width: 100%;
+  min-height: 52px;
+  font-size: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.secondary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.location {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 18px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+.location svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--rose);
+}
+
+.visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.image {
+  width: min(78vw, 340px);
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent);
+  mask-image: linear-gradient(180deg, #000 70%, transparent);
+}
+
+@media (min-width: 900px) {
+  .inner {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: end;
+    padding-top: 40px;
+  }
+  .copy {
+    text-align: left;
+    padding-bottom: 64px;
+  }
+  .ribbon {
+    padding-left: 0;
+    background: linear-gradient(90deg, var(--gold-light) 70%, transparent);
+    padding-inline: 16px 48px;
+  }
+  .lead {
+    margin-inline: 0;
+  }
+  .ctas {
+    margin-inline: 0;
+  }
+  .image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    max-height: 600px;
+    -webkit-mask-image: linear-gradient(180deg, #000 85%, transparent);
+    mask-image: linear-gradient(180deg, #000 85%, transparent);
+  }
+}

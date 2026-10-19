@@ -1,0 +1,113 @@
+.section {
+  padding-block: 56px;
+}
+
+.layout {
+  display: grid;
+  gap: 20px;
+}
+
+.cards {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--blush-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  border-radius: 50%;
+  background: var(--blush-100);
+  color: var(--rose);
+}
+
+.card h3 {
+  margin-bottom: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--rose-700);
+}
+
+.card address,
+.card p {
+  font-style: normal;
+  color: var(--ink-soft);
+}
+
+.cardBtn {
+  margin-top: 12px;
+}
+
+.phone {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.btnRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.card .hoursNote {
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: var(--success);
+}
+
+.hours {
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+.hours div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.hours dt {
+  white-space: nowrap;
+  font-weight: 600;
+}
+.hours dd {
+  margin: 0;
+  white-space: nowrap;
+  color: var(--ink-soft);
+}
+
+.map {
+  min-height: 280px;
+  overflow: hidden;
+  border: 4px solid var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  background: var(--blush-100);
+}
+.map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border: 0;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr 1.1fr;
+  }
+}

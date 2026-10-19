@@ -1,0 +1,43 @@
+.wrap {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  font-family: var(--font-script);
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--gold-dark);
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: clamp(1.6rem, 6vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Thin gold line with a diamond, as on the board. */
+.rule {
+  display: block;
+  position: relative;
+  width: 140px;
+  height: 1px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.rule span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.intro {
+  max-width: 34rem;
+  margin: 16px auto 0;
+  color: var(--ink-soft);
+}
